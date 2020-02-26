@@ -1,0 +1,23 @@
+<hr>
+<div> 
+ 
+    <table border="1">
+    <thead>
+    <tr>
+      <th>Emp Name</th>
+      <th>Designation</th>
+      <th>Salary</th>
+       <th>Experience</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of persons ; let i=index">
+      <td>{{i+1}}=>{{user.name}}</td>
+      <td>{{user.designation}}</td>
+      <td>{{user.salary}}
+      <td>{{user.experience}}</td>
+      <td><button (click)="deleteUser(user)" >Remove-{{i+1}}</button>
+    </tr>
+    </tbody>
+  </table> 
+</div>
